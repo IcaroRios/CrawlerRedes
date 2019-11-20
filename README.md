@@ -1,13 +1,16 @@
-Instalar pacotes com
-$ npm install
+O crawler JS está "abandonado"
 
-Para rodar o servidor, usar o comando:
-$ npm start
+O novo Objetivo é extrair informações do PDF.
 
-Requisição deve ser feita para:
+Atualmente extraindo do 'congeladores.pdf'
 
-localhost:3000/veiculos/{renavam}
+ATENÇÃO
+TENHA O PYTHON 3 E JAVA 7 OU 8 INSTALADO
+USAR O COMANDO: pip3 install tabula-py
+PARA INSTALAR A BIBLIOTECA
 
-sendo que {renavam} deve ser substituido por um código renavam válido, exemplo:
-
-localhost:3000/veiculos/212200321
+O objetivo é Extrair as informações de FORNECEDOR,MARCA,MODELO E CONSUMO/MÊS
+1- PEGANDO ISSO SEPARADAMENTE E REMOVENDO INFORMAÇÕES INÚTEIS JÁ TEREMOS ALGO PARA MOSTRAR NO DIA 21/11.
+2- SALVAR ISTO NO BACO DE DADOS DO AWS E TENTAR HOSPEDAR A APLICAÇÃO LÁ.
+3- INTERFACE GRÁFICA PARA BUSCA DE INFORMAÇÕES
+4- DEPOIS DEVERÁ SER PREPARADO PARA VÁRIOS DOCUMENTOS DISPONÍVEIS (TERÃO VARIAÇÕES NA EXTRAÇÃO)
