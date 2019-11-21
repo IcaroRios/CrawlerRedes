@@ -7,16 +7,12 @@ def is_nan(x):
     return (x is np.nan or x != x)
 # ======================================================================
 
-useLattice = False
-useStream  = True
-usePages   = 'all' #coloca o número da página ex '2' ou 'all' para pegar todas as tabelas da página
-
-
 dataArray = []
 
 dataArray.append('============================================================================================================================')
 
-df = tabula.read_pdf("televisores.pdf", multiple_tables=True, lattice=True, stream=False, pages='all')
+df = tabula.read_pdf("televisores.pdf", multiple_tables=True, lattice=False, stream=True, pages='2')
+# DEVERÁ TER OUTRO TRATAMENTO
 for table in df:
     data = pd.DataFrame(table) #convertendo pagina em Panda DataFrame
     for row, value in data.iterrows():
