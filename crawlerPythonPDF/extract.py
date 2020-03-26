@@ -7,7 +7,7 @@ def is_nan(x):
     return (x is np.nan or x != x)
 # ======================================================================
 dataArray = []
-df = tabula.read_pdf("http://www.inmetro.gov.br/consumidor/pbe/congeladores.pdf", multiple_tables=True, lattice=False, stream=True, pages='all')
+df = tabula.read_pdf("congeladores.pdf", multiple_tables=True, lattice=False, stream=True, pages='all')
 for table in df:
     data = pd.DataFrame(table) #convertendo pagina em Panda DataFrame
     for row, value in data.iterrows():
