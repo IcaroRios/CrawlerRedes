@@ -4,8 +4,7 @@ import pandas as pd
 import json
 # UTIL Functions
 def is_nan(x):
-    x = float('nan')
-    return (math.isnan(x) or x != x)
+    return (x is np.nan or x != x)
 # ======================================================================
 dataArray = []
 df = tabula.read_pdf("http://www.inmetro.gov.br/consumidor/pbe/congeladores.pdf", multiple_tables=True, lattice=False, stream=True, pages='all')
