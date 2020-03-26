@@ -1,10 +1,11 @@
-import numpy as np
+import math
 import tabula
 import pandas as pd
 import json
 # UTIL Functions
 def is_nan(x):
-    return (x is np.nan or x != x)
+    x = float('nan')
+    return (math.isnan(x) or x != x)
 # ======================================================================
 def lambda_handler(event, context):
     dataArray = []
