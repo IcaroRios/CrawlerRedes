@@ -1,35 +1,90 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> 
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" class="init">
-		
-$(document).ready(function() {
-	$('#example').DataTable( {
-		"ajax": {
-			"url": "crawlerPythonPDF/teste.txt",
-			"dataSrc": "demo"
-		}
-	} );
-} );
-</script> 
-</head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V04</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
 <body>
- <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Fornecedor</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Volume Interno</th>
-                <th>CONSUMO DE ENERGIA (kWh/mês) -  127v/220v</th>
-                <th>ÍNDICE DE EFICIÊNCIA(C/Cp) -  127v/220v</th>
-                <th>AGENTE DE EXPANSÃO DA ESPUMA</th>
-                <th>FAIXA DE CLASSIFICAÇÃO - 127v/220v</th>
-            </tr>
-        </thead>
-    </table>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						<table id="example">
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Fornecedor</th>
+									<th class="cell100 column2">Marca</th>
+									<th class="cell100 column3">Modelo</th>
+									<th class="cell100 column4">Volume</th>
+									<th class="cell100 column5">Consumo</th>
+									<th class="cell100 column5">Eficiência</th>
+									<th class="cell100 column5">Classificação</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> 
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() {
+			console.log("foi")
+			$('#example').DataTable( {
+				"ajax": {
+					"url": "crawlerPythonPDF/teste.txt",
+					"dataSrc": "demo"
+				}
+			} )
+		} )
+	</script> 
+
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> 
+        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" class="init">
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                "ajax": {
+                    "url": "crawlerPythonPDF/teste.txt",
+                    "dataSrc": "demo"
+                }
+            } )
+        } )
+        </script> 
+    </head> 
+    <body>
+    <table id="example" class="display">
+            <thead>
+                <tr>
+                    <th>Fornecedor</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Volume Interno</th>
+                    <th>CONSUMO DE ENERGIA (kWh/mês) -  127v/220v</th>
+                    <th>ÍNDICE DE EFICIÊNCIA(C/Cp) -  127v/220v</th>
+                    <th>AGENTE DE EXPANSÃO DA ESPUMA</th>
+                    <th>FAIXA DE CLASSIFICAÇÃO - 127v/220v</th>
+                </tr>
+            </thead>
+        </table>
+    </body>
+</html>
