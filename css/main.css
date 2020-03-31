@@ -1,7 +1,16 @@
 /* div#example_filter {
   display: none;
 } */
+.image img {
+  max-width: 810px;
+  margin: auto;
+}
 
+.image {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+}
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
