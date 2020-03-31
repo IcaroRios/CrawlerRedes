@@ -21,5 +21,28 @@ for table in df:
         if not hasNaN:
             dataArray.append(rowData)
 
-print(dataArray)
+# print(dataArray)
+del dataArray[:5]
+print (dataArray)
 
+
+#CASO TUDO DER ERRADO, COLOCAR ESSE CÓDIGO AQUI PARA GERAR O ARQUIVO E SER LIDO PELO DATATABLES.
+
+# fileOUT = open('teste.txt','w+')
+# fileOUT.write('{\n\t"demo": [\n')
+# for num,congelador in enumerate(dataArray,start=1):
+#     fileOUT.write('\t\t[\n')
+#     for num2,data in enumerate(congelador,start=1):
+#         fileOUT.write('\t\t\t')
+#         fileOUT.write('\"')
+#         fileOUT.write(data)
+#         if num2 == len(congelador):
+#             fileOUT.write('\"\n')
+#         else:
+#             fileOUT.write('\",\n')
+#     if num == len(dataArray):
+#         fileOUT.write('\t\t]\n')
+#     else:
+#         fileOUT.write('\t\t],\n')
+# fileOUT.write('\t]\n}')
+# fileOUT.close()
