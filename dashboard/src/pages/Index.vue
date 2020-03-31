@@ -13,10 +13,15 @@
     </div>
   </q-page>
 </template>
-
 <script>
+import Vue from 'vue'
 export default {
   name: 'PageIndex',
+  mounted () {
+    Vue.prototype.$axios.get('http://3.91.0.98/crawlerPythonPDF/teste.txt?_=1585636130510').then(function (response) {
+      console.log(response.data)
+    })
+  },
   data () {
     return {
       columns: [
