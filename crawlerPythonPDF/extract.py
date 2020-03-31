@@ -34,7 +34,7 @@ for num,congelador in enumerate(dataArray,start=1):
     for num2,data in enumerate(congelador,start=1):
         fileOUT.write('\t\t\t')
         fileOUT.write('\"')
-        fileOUT.write(data)
+        fileOUT.write(data.replace(" ", "/"))
         if num2 == len(congelador):
             fileOUT.write('\"\n')
         else:
