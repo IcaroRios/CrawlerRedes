@@ -30,6 +30,9 @@ del dataArray[:5]
 fileOUT = open('teste.txt','w+')
 fileOUT.write('{\n\t"demo": [\n')
 for num,congelador in enumerate(dataArray,start=1):
+    if len(congelador) != 8:
+        congelador.append('--')
+
     fileOUT.write('\t\t[\n')
     for num2,data in enumerate(congelador,start=1):
         fileOUT.write('\t\t\t')
